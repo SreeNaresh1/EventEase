@@ -8,8 +8,16 @@ connectDB();
 
 const app = express();
 
+const allowedOrigins = [
+  'http://localhost:5173',
+  'http://localhost:3000',
+  // Add your Vercel URL here after deploying frontend, e.g.:
+  // 'https://event-ease-xyz.vercel.app',
+  process.env.FRONTEND_URL,          // set this env var on Render
+].filter(Boolean);
+
 app.use(cors({
-  origin: ['http://localhost:5173', 'http://localhost:3000'],
+  origin: allowedOrigins,
   credentials: true,
 }));
 app.use(express.json());
