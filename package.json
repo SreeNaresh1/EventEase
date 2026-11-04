@@ -1,0 +1,15 @@
+{
+  "name": "eventease",
+  "version": "1.0.0",
+  "description": "EventEase - Smart Campus Event Discovery and Registration Platform",
+  "scripts": {
+    "server": "cd backend && npm run dev",
+    "client": "cd frontend && npm run dev",
+    "seed": "cd backend && node seed.js",
+    "build": "cd frontend && npm run build"
+  },
+  "keywords": ["eventease", "mern", "campus-events"],
+  "author": "",
+  "license": "ISC"
+}
+
